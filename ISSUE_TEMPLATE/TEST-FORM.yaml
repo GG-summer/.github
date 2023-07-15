@@ -1,0 +1,42 @@
+name: Test Issue Template
+description: Testing the template API
+title: "[Testing...]: "
+labels: ["1", "2", "3"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Test Testesen is testing the test form
+  - type: textarea
+    id: describe
+    attributes:
+      label: What are you doing?
+      description: What did you expect to happen?
+      placeholder: Tell me your name, and I will tell you what you are called!
+      value: "A wild test appeared!"
+    validations:
+      required: true
+  - type: dropdown
+    id: happiness
+    attributes:
+      label: How happy are you with this test?
+      multiple: true
+      options:
+        - Not
+        - Not at all
+        - Not not at all
+        - Not not
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our CODE OF JOY!
+      options:
+        - label: I agree to be happy
+          required: true
